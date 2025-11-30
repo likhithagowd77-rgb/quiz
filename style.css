@@ -1,0 +1,39 @@
+:root{
+  --bg:#f6f9fc;
+  --card:#ffffff;
+  --accent:#0b74de;
+  --accent-2:#06b6d4;
+  --muted:#6b7280;
+  --dark:#081226;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--dark)}
+.container{max-width:860px;margin:28px auto;padding:0 16px}
+.top{text-align:center;margin-bottom:14px}
+h1{margin:6px 0;font-size:22px}
+.muted{color:var(--muted)}
+.card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 8px 24px rgba(8,12,20,0.06);margin-bottom:14px}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+.progress{flex:1;height:10px;background:#e9f0fa;border-radius:999px;overflow:hidden;margin-left:12px}
+.progress .fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.question-wrap{min-height:170px;padding:10px;border-radius:8px;border:1px solid #eef5ff;background:#fbfeff}
+.q-title{font-weight:700;margin-bottom:8px}
+.options{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.option{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+.option input{transform:scale(1.05);margin-right:6px}
+.option:hover{background:#f1f8ff}
+.option.selected{background:linear-gradient(90deg,#eef7ff,#ffffff);border-color:var(--accent)}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:10px}
+.btn{padding:10px 14px;border-radius:8px;border:1px solid rgba(11,17,28,0.06);background:white;cursor:pointer}
+.btn.primary{background:var(--accent);color:white;border:none}
+.btn:disabled{opacity:0.5;cursor:not-allowed}
+.center{display:flex;justify-content:center;flex:1}
+.small{font-size:13px;margin-top:8px}
+.h2{font-size:20px;font-weight:800;margin:6px 0}
+.breakdown{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.break-item{padding:10px;border-radius:8px;border:1px solid #eef5ff;background:#fff}
+.break-item.correct{border-left:6px solid #18a058}
+.break-item.wrong{border-left:6px solid #e04646}
+.result-card .muted{margin-bottom:10px}
+.foot{text-align:center;margin-top:8px;color:var(--muted);font-size:13px}
+@media(max-width:560px){.controls{flex-direction:column-reverse}.meta{flex-direction:column;align-items:flex-start}}
