@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Quiz — Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <header class="top">
+      <h1>Quick Quiz — Test your knowledge</h1>
+      <p class="muted">12 multiple-choice questions • instant scoring • review answers</p>
+    </header>
+
+    <section class="card quiz-area" id="quizArea" aria-live="polite">
+      <div class="meta">
+        <div id="progressText">Question 1 / 12</div>
+        <div id="progressBar" class="progress"><div class="fill" style="width:0%"></div></div>
+      </div>
+
+      <div id="questionWrap" class="question-wrap">
+        <!-- question gets rendered here -->
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="btn" disabled>← Previous</button>
+        <div class="center">
+          <button id="submitBtn" class="btn primary">Submit Quiz</button>
+        </div>
+        <button id="nextBtn" class="btn">Next →</button>
+      </div>
+
+      <div class="small muted note">Answers save automatically. You can retake anytime.</div>
+    </section>
+
+    <section id="resultCard" class="card result-card" hidden>
+      <h2>Your Result</h2>
+      <div id="scoreLine" class="h2"></div>
+      <div id="percentLine" class="muted"></div>
+
+      <div id="breakdown" class="breakdown"></div>
+
+      <div class="controls">
+        <button id="retakeBtn" class="btn">Retake Quiz</button>
+        <button id="exportBtn" class="btn primary">Export Results (CSV)</button>
+      </div>
+    </section>
+
+    <footer class="foot muted">Built with HTML/CSS/JavaScript • Offline-friendly</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
